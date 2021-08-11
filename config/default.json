@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "myPrivateKey",
+  "db": "mongodb://localhost/my_english_app"
+}
