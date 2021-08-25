@@ -1,5 +1,6 @@
 const Joi = require("joi");
 const mongoose = require("mongoose");
+const { v4: uuidv4 } = require("uuid");
 
 const wordSchema = new mongoose.Schema({
   subjectId: {
@@ -18,6 +19,10 @@ const wordSchema = new mongoose.Schema({
     type: String,
     required: true,
     enum: ["easy", "medium", "hard"],
+  },
+  key: {
+    type: String,
+    default: uuidv4,
   },
 });
 
